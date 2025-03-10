@@ -138,4 +138,7 @@
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
+  .mask-image {
+    mask-image: radial-gradient(ellipse at center, white 40%, transparent 100%);
+  }
 }
