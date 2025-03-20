@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -37,6 +39,7 @@ const info = [
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [selectedSkills, setSelectedSkills] = useState([]);
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -51,7 +54,7 @@ const Contact = () => {
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-accent">Let's work together</h3>
+              <h3 className="text-4xl text-accent">Hire me</h3>
               <p className="text-white/60">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
                 nam dolor eaque sed suscipit modi distinctio perferendis et
@@ -64,17 +67,31 @@ const Contact = () => {
                 <Input type="phone" placeholder="Phone number" />
               </div>
               {/* select */}
-              <Select>
+              <Select
+                multiple
+                value={selectedSkills}
+                onValueChange={setSelectedSkills}
+              >
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue
+                    placeholder="Select skill(s) you require"
+                    multiple
+                    value={selectedSkills}
+                  />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="mst">Backend Development</SelectItem>
-                    <SelectItem value="yst">AI Driven Development</SelectItem>
+                    <SelectLabel>Select skill(s) you require</SelectLabel>
+                    <SelectItem value="Web Development">
+                      Web Development
+                    </SelectItem>
+                    <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
+                    <SelectItem value="Backend Development">
+                      Backend Development
+                    </SelectItem>
+                    <SelectItem value="AI Driven Development">
+                      AI Driven Development
+                    </SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>

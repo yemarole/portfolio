@@ -57,7 +57,7 @@ const Services = () => {
                 onMouseEnter={(e) => {
                   e.currentTarget.querySelector(
                     ".service-number"
-                  ).style.WebkitTextStroke = "1px #00ff99";
+                  ).style.WebkitTextStroke = "1px #8338ec";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.querySelector(

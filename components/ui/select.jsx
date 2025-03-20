@@ -6,16 +6,47 @@ import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-function Select({ ...props }) {
-  return <SelectPrimitive.Root data-slot="select" {...props} />;
+function Select({ multiple = false, value, onValueChange, ...props }) {
+  const handleValueChange = (newValue) => {
+    if (multiple) {
+      const updatedValues = value.includes(newValue)
+        ? value.filter((v) => v !== newValue)
+        : [...value, newValue];
+      onValueChange(updatedValues);
+    } else {
+      onValueChange(newValue);
+    }
+  };
+
+  return (
+    <SelectPrimitive.Root
+      value={multiple ? undefined : value}
+      onValueChange={handleValueChange}
+      {...props}
+    />
+  );
 }
 
 function SelectGroup({ ...props }) {
   return <SelectPrimitive.Group data-slot="select-group" {...props} />;
 }
 
-function SelectValue({ ...props }) {
-  return <SelectPrimitive.Value data-slot="select-value" {...props} />;
+function SelectValue({ multiple, value, ...props }) {
+  if (multiple) {
+    return (
+      <div className="flex flex-wrap gap-1">
+        {value.map((val, index) => (
+          <span
+            key={index}
+            className="bg-accent text-primary px-2 py-1 rounded-md"
+          >
+            {val}
+          </span>
+        ))}
+      </div>
+    );
+  }
+  return <SelectPrimitive.Value {...props} />;
 }
 
 function SelectTrigger({ className, children, ...props }) {

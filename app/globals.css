@@ -61,7 +61,7 @@
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.863 0.218 159.52);
+  --accent: oklch(0.55 0.25 290);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --accent-hover: oklch(0.793 0.19 159.33);
   --destructive: oklch(0.577 0.245 27.325);
@@ -98,7 +98,7 @@
   --secondary-foreground: oklch(0.984 0.003 247.858);
   --muted: oklch(0.279 0.041 260.031);
   --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.863 0.218 159.52);
+  --accent: oklch(0.55 0.25 290);
   --accent-foreground: oklch(0.984 0.003 247.858);
   --accent-hover: oklch(0.793 0.19 159.33);
   --destructive: oklch(0.396 0.141 25.723);
@@ -139,7 +139,7 @@
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
   .group:hover .text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99;
+    -webkit-text-stroke: 1px #8338ec;
   }
   .text-outline {
     -webkit-text-stroke: 1px #ffffff;

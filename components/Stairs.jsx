@@ -39,7 +39,7 @@ The delay for each div is calculated dynamically based on it's reversed index, c
               ease: "easeInOut",
               delay: reverseIndex(index) * 0.1,
             }}
-            className="h-full w-full bg-gradient-to-b from-green-300 to-green-700 relative"
+            className="h-full w-full bg-gradient-to-b from-purple-500 to-purple-900 relative"
           />
         );
       })}
