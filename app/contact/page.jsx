@@ -82,14 +82,28 @@ const Contact = () => {
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select skill(s) you require</SelectLabel>
-                    <SelectItem value="Web Development">
+                    <SelectItem
+                      value="Web Development"
+                      selectedSkills={selectedSkills}
+                    >
                       Web Development
                     </SelectItem>
-                    <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
-                    <SelectItem value="Backend Development">
+                    <SelectItem
+                      value="UI/UX Design"
+                      selectedSkills={selectedSkills}
+                    >
+                      UI/UX Design
+                    </SelectItem>
+                    <SelectItem
+                      value="Backend Development"
+                      selectedSkills={selectedSkills}
+                    >
                       Backend Development
                     </SelectItem>
-                    <SelectItem value="AI Driven Development">
+                    <SelectItem
+                      value="AI Driven Development"
+                      selectedSkills={selectedSkills}
+                    >
                       AI Driven Development
                     </SelectItem>
                   </SelectGroup>

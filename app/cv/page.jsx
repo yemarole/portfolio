@@ -24,7 +24,7 @@ const about = {
 
     {
       fieldName: "Email",
-      fieldValue: "yemiarole@icloud.com",
+      fieldValue: "myemail@email.com",
     },
 
     {
@@ -57,22 +57,22 @@ const experience = {
       duration: "2024 - Present",
     },
     {
-      company: "Knight Frank Finance",
+      company: "Finance Co.",
       position: "Senior Financial Consultant",
       duration: "2021 - 2023",
     },
     {
-      company: "Trinity Lifetime Partners",
+      company: "Finance Co.",
       position: "Head of Mortgages",
       duration: "2016 - 2021",
     },
     {
-      company: "KFH Finance",
+      company: "Finance Co.",
       position: "Senior Advisor",
       duration: "2015 - 2016",
     },
     {
-      company: "Lloyds Banking Group",
+      company: "Finance Co.",
       position: "Avisory Consultant",
       duration: "2014 - 2015",
     },
